@@ -1,5 +1,8 @@
 FROM tensorflow/tensorflow:2.1.1-gpu
 
+# Add NVIDIA repository GPG key
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
+
 RUN pip3 --no-cache-dir install \
     Pillow \
     ffmpeg-python
